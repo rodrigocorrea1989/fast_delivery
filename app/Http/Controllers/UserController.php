@@ -47,4 +47,11 @@ class UserController extends Controller
         $users = User::orderBy('created_at', 'desc')->get();
         return view('usuarios.users', compact('users'));
     }
+
+
+    public function edit_user($id)
+    {
+        $user = User::findOrFail($id);
+        return view('usuarios.edit_user', compact('user'));
+    }
 }

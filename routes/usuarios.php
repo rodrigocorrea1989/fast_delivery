@@ -17,3 +17,8 @@ Route::post('/users/save_new', [UserController::class, 'save_new'])->name('save_
 Route::delete('/usuarios/{id}', [UserController::class, 'delete_user'])
     ->middleware('auth')
     ->name('delete_user');
+
+
+Route::post('/usuarios/edit_user/{id}', [UserController::class, 'edit_user'])
+    ->middleware('auth')
+    ->name('edit_user');

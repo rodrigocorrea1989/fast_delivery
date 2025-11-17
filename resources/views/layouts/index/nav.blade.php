@@ -40,7 +40,7 @@
 <div class="container mt-3">
     <p><strong>
             @auth
-            {{ ucwords(auth()->user()->name) }}
+            <p class="text-primary">Usuario:{{ ucwords(auth()->user()->name) }}</p>
             @endauth
     </p></strong>
 </div>

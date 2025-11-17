@@ -59,19 +59,10 @@
                         </div>
 
                         <!-- Botones -->
-                        <div class="d-flex justify-content-between align-items-center mt-4">
-                            @if (Route::has('password.request'))
-                            <a class="small text-muted" href="{{ route('password.request') }}">
-                                ¿Olvidaste tu contraseña?
-                            </a>
-                            @endif
-
-                            <button type="submit" class="btn btn-primary">
+                        <div class="d-flex align-items-center mt-4">
+                            <button type="submit" class="btn btn-primary ml-auto">
                                 Ingresar
                             </button>
-                        </div>
-                        <div>
-                            <a class="text-primary d-flex justify-content-between align-items-center mt-4" href="{{Route('register')}}"> Registrarme </a>
                         </div>
                     </form>
                 </div>
