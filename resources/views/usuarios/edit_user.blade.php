@@ -2,8 +2,10 @@
 @include('layouts.index.nav')
 
 @php
+$id = $user->id;
 $name = $user->name;
 $email = $user->email;
+$tipo = $user->tipo;
 @endphp
 
 
@@ -17,8 +19,9 @@ $email = $user->email;
                 </div>
 
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" action="{{ route('edit', $id ) }}">
                         @csrf
+                        @method('PUT')
                         <!-- Nombre -->
                         <div class="form-group">
                             <label for="name">Nombre</label>
@@ -40,6 +43,22 @@ $email = $user->email;
                             </div>
                             <input type="password" class="form-control" name="password" id="password" disabled required>
                         </div>
+
+                        <!-- Tipo -->
+                        <div class="form-group mt-3">
+                            <label for="tipo">Tipo</label>
+                            <select class="custom-select text-danger" id="tipo" name="tipo">
+                                @if ($tipo == 0)
+                                <option value="0" selected>Usuario</option>
+                                <option value="1">Admin</option>
+                                @else
+                                <option value="0">Usuario</option>
+                                <option value="1" selected>Admin</option>
+                                @endif
+
+                            </select>
+                        </div>
+
 
                         <!-- Botón -->
                         <div class="mt-4 text-center">

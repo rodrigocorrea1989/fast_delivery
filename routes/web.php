@@ -19,6 +19,11 @@ Route::middleware('auth')->group(function () {
         return view('index');
     })->name('index');
 
+
+    Route::get('/restricted', function () {
+        return view('restricted');
+    })->middleware(['verified'])->name('restricted');
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->middleware(['verified'])->name('dashboard');
@@ -27,5 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
 
 require __DIR__ . '/auth.php';

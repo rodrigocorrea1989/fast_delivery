@@ -9,5 +9,5 @@
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/usuarios.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <title>Fast Delivery</title>
+    <title>Seguros SYS</title>
 </head>

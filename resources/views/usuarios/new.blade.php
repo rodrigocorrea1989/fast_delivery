@@ -31,6 +31,15 @@
                             <input type="password" class="form-control" name="password" id="password" required>
                         </div>
 
+                        <!-- Tipo -->
+                        <div class="form-group mt-3">
+                            <label for="tipo">Tipo</label>
+                            <select class="custom-select" id="tipo" name="tipo">
+                                <option value="0">Usuario</option>
+                                <option value="1">Admin</option>
+                            </select>
+                        </div>
+
                         <!-- Botón -->
                         <div class="mt-4 text-center">
                             <button type="submit" class="btn btn-primary btn-block">

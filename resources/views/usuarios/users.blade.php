@@ -10,6 +10,7 @@
                     <tr>
                         <th>Nombre</th>
                         <th>Email</th>
+                        <th>Tipo</th>
                         <th>Creado el</th>
                         <th></th>
                         <th></th>
@@ -17,9 +18,16 @@
                 </thead>
                 <tbody>
                     @foreach ($users as $user)
+
+                    @php
+
+                    $tipo = ($user->tipo == 0) ? 'Usuario' : 'Admin';
+
+                    @endphp
                     <tr>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $tipo }}</td>
                         <td>{{ $user->created_at->format('d/m/Y H:i') }}</td>
                         <td>
                             <form action="{{ route('edit_user', $user->id) }}" method="POST" class="d-inline">
