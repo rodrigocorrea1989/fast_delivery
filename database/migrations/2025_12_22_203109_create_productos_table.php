@@ -34,3 +34,4 @@ return new class extends Migration
         Schema::dropIfExists('productos');
     }
 };
+//borrar, se escribe para agregar a git
